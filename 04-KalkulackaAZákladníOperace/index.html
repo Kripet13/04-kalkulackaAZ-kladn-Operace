@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulačka</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h2>Kalkulačka</h2>
+    <div id="containerOne">
+        <input type="number" id="numberOne" placeholder="první číslo">
+        <input type="number" id="numberTwo" placeholder="druhé číslo">
+        <select id="operation">
+            <option value="none">operace</option>
+            <option value="plus">+</option>
+            <option value="minus">-</option>
+            <option value="times">*</option>
+            <option value="divide">/</option>
+        </select>
+        <button onclick="startCalculate()">=</button>
+        <input type="text" id="result" placeholder="výsledek" readonly>
+        <button onclick="annul()">Vynulovat</button>
+    </div>
+
+    <h2>Mini hra</h2>
+    <button onclick="startButton()">Zahájit hru</button>
+    <div id="containerTwo" hidden>
+    <input type="number" id="guess" placeholder="zadejte svůj odhad">
+    <button onclick="check()">Hádat</button>
+    <p id="generator"></p>
+    <p id="hint"></p>
+    </div>
+    <button onclick="restartGame()" hidden>Hrát znovu</button>
+
+    <h2>Převodník měn z CZK</h2>
+    <div id="containerThree">
+        <input type="number" id="cur" placeholder="Zadejte částku v CZK">
+        <h5>Zde vyberte měnu do které chcete převést.</h5>
+        <select id="currency">
+            <option value="convert">Zvolte měnu</option>
+            <option value="euro">EUR</option>
+            <option value="dolar">USD</option>
+            <option value="libra">GBP</option>
+        </select>
+        <p id="currencyConvert"></p>
+
+        <button onclick="convertCurrency()">Převést</button>
+    </div>
+</body>
